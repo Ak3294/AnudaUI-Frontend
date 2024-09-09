@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-preloader="disable"
+  data-theme="default"
+  data-topbar="light"
+  data-bs-theme="light"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Anuda Mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <!-- Fonts css load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      id="fontsLink"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <!-- ========== App Menu ========== -->
+      <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+          <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+              <img
+                src="assets/images/white-logo.png"
+                alt="white-logo"
+                height="33"
+              />
+            </span>
+            <span class="logo-lg">
+              <img src="assets/images/logo.png" alt="logo" height="40" />
+            </span>
+          </a>
+          <button
+            type="button"
+            class="btn btn-sm p-0 fs-3xl header-item float-end btn-vertical-sm-hover"
+            id="vertical-hover"
+          >
+            <i class="ri-record-circle-line"></i>
+          </button>
+        </div>
+
+        <div id="scrollbar">
+          <div class="container-fluid">
+            <div id="two-column-menu"></div>
+            <ul class="navbar-nav" id="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  <i class="ph-gauge"></i>
+                  <span data-key="t-dashboards">Dashboards</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarEcommerce"
+                  class="nav-link menu-link collapsed"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarEcommerce"
+                >
+                  <i class="ph-storefront"></i>
+                  <span data-key="t-ecommerce">Product</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarEcommerce">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="products.html"
+                        class="nav-link"
+                        data-key="t-products"
+                        >Products</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="add-product.html"
+                        class="nav-link"
+                        data-key="t-create-product"
+                        >Add Product</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="orders.html" class="nav-link" data-key="t-orders"
+                        >Orders</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="order-overview.html"
+                        class="nav-link"
+                        data-key="t-order-overview"
+                        >Order Overview</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link menu-link">
+                  <i class="ph-user-circle"></i>
+                  <span data-key="t-calendar">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customers.html" class="nav-link menu-link"
+                  ><i class="bi bi-people"></i>
+                  <span data-key="t-calendar">Customers</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarInvoices"
+                  class="nav-link menu-link"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarInvoices"
+                >
+                  <i class="ph-file-text"></i>
+                  <span data-key="t-invoices">Invoices</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarInvoices">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="invoices-list.html"
+                        class="nav-link"
+                        data-key="t-list-view"
+                        >List View</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="invoices-overview.html"
+                        class="nav-link"
+                        data-key="t-overview"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="create-invoices.html"
+                        class="nav-link"
+                        data-key="t-create-invoice"
+                        >Create Invoice</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="transactions.html" class="nav-link menu-link">
+                  <i class="ph ph-credit-card"></i>
+                  <span data-key="t-calendar">Transactions</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link menu-link">
+                  <i class="ph ph-sign-out"></i>
+                  <span data-key="t-calendar">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+
+        <div class="sidebar-background"></div>
+      </div>
+      <!-- Left Sidebar End -->
+      <!-- Vertical Overlay-->
+      <div class="vertical-overlay"></div>
+      <header id="page-topbar">
+        <div class="layout-width">
+          <div class="navbar-header">
+            <div class="d-flex">
+              <!-- LOGO -->
+              <div class="navbar-brand-box horizontal-logo">
+                <a href="index.html" class="logo logo-light">
+                  <span class="logo-sm">
+                    <img
+                      src="assets/images/white-logo.png"
+                      alt=""
+                      height="30"
+                    />
+                  </span>
+                  <span class="logo-lg">
+                    <img src="assets/images/logo.png" alt="" height="30" />
+                  </span>
+                </a>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none"
+                id="topnav-hamburger-icon"
+              >
+                <span class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <img
+                  src="assets/images/favicon.png"
+                  alt="logo"
+                  height="30"
+                  style="margin-left: 20px"
+                  class="m-logo"
+                />
+              </button>
+
+              <form class="app-search d-none d-md-inline-flex">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    autocomplete="off"
+                    id="search-options"
+                    value=""
+                  />
+                  <span class="mdi mdi-magnify search-widget-icon"></span>
+                  <span
+                    class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                    id="search-close-options"
+                  ></span>
+                </div>
+                <div
+                  class="dropdown-menu dropdown-menu-lg"
+                  id="search-dropdown"
+                >
+                  <div data-simplebar style="max-height: 320px">
+                    <!-- item-->
+                    <div class="dropdown-header">
+                      <h6 class="text-overflow text-muted mb-0 text-uppercase">
+                        Recent Searches
+                      </h6>
+                    </div>
+
+                    <div class="dropdown-item bg-transparent text-wrap">
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >how to setup <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >buttons <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                    </div>
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-1 text-uppercase">
+                        Pages
+                      </h6>
+                    </div>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Analytics Dashboard</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Help Center</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-user-settings-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>My account settings</span>
+                    </a>
+
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-2 text-uppercase">
+                        Members
+                      </h6>
+                    </div>
+
+                    <div class="notification-list">
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-2.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Angela Bernier</h6>
+                            <span class="fs-11 mb-0 text-muted">Manager</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-3.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">David Grasso</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >Web Designer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-5.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Mike Bunch</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >React Developer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="text-center pt-3 pb-1">
+                    <a href="#" class="btn btn-primary btn-sm"
+                      >View All Results <i class="ri-arrow-right-line ms-1"></i
+                    ></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div
+                class="dropdown topbar-head-dropdown ms-1 header-item"
+                id="notificationDropdown"
+              >
+                <button
+                  type="button"
+                  class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle"
+                  id="page-header-notifications-dropdown"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-bell fs-2xl"></i>
+                  <span
+                    class="position-absolute topbar-badge fs-3xs translate-middle badge rounded-pill bg-danger"
+                    ><span class="notification-badge">4</span
+                    ><span class="visually-hidden">unread messages</span></span
+                  >
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  aria-labelledby="page-header-notifications-dropdown"
+                >
+                  <div class="dropdown-head rounded-top">
+                    <div class="p-3 border-bottom border-bottom-dashed">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <h6 class="mb-0 fs-lg fw-semibold">
+                            Notifications
+                            <span
+                              class="badge bg-danger-subtle text-danger fs-sm notification-badge"
+                            >
+                              4</span
+                            >
+                          </h6>
+                          <p class="fs-md text-muted mt-1 mb-0">
+                            You have
+                            <span class="fw-semibold notification-unread"
+                              >3</span
+                            >
+                            unread messages
+                          </p>
+                        </div>
+                        <div class="col-auto dropdown">
+                          <a
+                            href="javascript:void(0);"
+                            data-bs-toggle="dropdown"
+                            class="link-secondary fs-md"
+                            ><i class="bi bi-three-dots-vertical"></i
+                          ></a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">All Clear</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Mark all as read</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Archive All</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-2 ps-2" id="notificationItemsTabContent">
+                    <div data-simplebar style="max-height: 300px" class="pe-2">
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        New
+                      </h6>
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-info-subtle text-info rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-badge-check"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 fs-md mb-2 lh-base">
+                                Your <b>Elite</b> author Graphic Optimization
+                                <span class="text-secondary">reward</span> is
+                                ready!
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> Just 30
+                                sec ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check01"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check01"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-2.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-success rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Angela Bernier
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                Answered to your comment on the cash flow
+                                forecast's graph 🔔.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 48 min
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check02"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check02"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-danger-subtle text-danger rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-message-square-dots"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-2 fs-md lh-base">
+                                You have received
+                                <b class="text-success">20</b> new messages in
+                                the conversation
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 2 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check03"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check03"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        Read Before
+                      </h6>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-8.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-warning rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Maureen Gibson
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                We talked about a project on linkedin.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 4 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check04"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check04"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="notification-actions" id="notification-actions">
+                      <div
+                        class="d-flex text-muted justify-content-center align-items-center"
+                      >
+                        Select
+                        <div
+                          id="select-content"
+                          class="text-body fw-semibold px-1"
+                        >
+                          0
+                        </div>
+                        Result
+                        <button
+                          type="button"
+                          class="btn btn-link link-danger p-0 ms-2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeNotificationModal"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown ms-sm-3 header-item topbar-user">
+                <button
+                  type="button"
+                  class="btn shadow-none"
+                  id="page-header-user-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle header-profile-user"
+                      src="assets/images/users/32/avatar-1.jpg"
+                      alt="Header Avatar"
+                    />
+                    <span class="text-start ms-xl-2">
+                      <span
+                        class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                        >Richard Marshall</span
+                      >
+                    </span>
+                  </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <!-- item-->
+                  <h6 class="dropdown-header">Welcome Richard!</h6>
+                  <a class="dropdown-item" href="profile.html"
+                    ><i
+                      class="mdi mdi-account-circle text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Profile</span></a
+                  >
+                  <a class="dropdown-item" href="change-password.html"
+                    ><i
+                      class="mdi mdi-lock-outline text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Change Password</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="auth-logout.html"
+                    ><i
+                      class="mdi mdi-logout text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle" data-key="t-logout"
+                      >Logout</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- removeNotificationModal -->
+      <div
+        id="removeNotificationModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="NotificationModalbtn-close"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-4"></i>
+                </div>
+                <div class="mt-4 fs-base">
+                  <h4 class="mb-1">Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this Notification ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="delete-notification"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- removeCartModal -->
+      <div
+        id="removeCartModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="close-cartmodal"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-5"></i>
+                </div>
+                <div class="mt-4">
+                  <h4>Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this product ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="remove-cartproduct"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between"
+                >
+                  <h4 class="mb-sm-0">Add Product</h4>
+
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a href="javascript: void(0);">Product</a>
+                      </li>
+                      <li class="breadcrumb-item active">Add Product</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <form method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="d-flex align-items-center flex-wrap gap-2 mb-4">
+                    <ul
+                      class="nav nav-pills arrow-navtabs nav-secondary gap-2 flex-grow-1 order-2 order-lg-1"
+                      role="tablist"
+                    >
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link active"
+                          data-bs-toggle="tab"
+                          href="#productinfo"
+                          role="tab"
+                          aria-selected="false"
+                          tabindex="-1"
+                        >
+                          Product Information
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          data-bs-toggle="tab"
+                          href="#prdescriptions"
+                          role="tab"
+                          aria-selected="true"
+                        >
+                          Description
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          data-bs-toggle="tab"
+                          href="#proimages"
+                          role="tab"
+                          aria-selected="false"
+                          tabindex="-1"
+                        >
+                          Product Images
+                        </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          data-bs-toggle="tab"
+                          href="#technicaldetials"
+                          role="tab"
+                          aria-selected="false"
+                          tabindex="-1"
+                        >
+                          Technical Details
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          data-bs-toggle="tab"
+                          href="#addinfor"
+                          role="tab"
+                          aria-selected="false"
+                          tabindex="-1"
+                        >
+                          Additional Information
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="tab-content">
+                      <div
+                        class="tab-pane active"
+                        id="productinfo"
+                        role="tabpanel"
+                      >
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-xxl-12">
+                              <div class="row">
+                                <div class="col-lg-6 mb-3">
+                                  <label
+                                    for="productCategories"
+                                    class="form-label"
+                                    >Select Categories
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <select
+                                    class="form-control"
+                                    data-choices
+                                    name="productCategories"
+                                    id="productCategories"
+                                    onclick="return catChange(this);"
+                                  >
+                                    <option value="">Select categories</option>
+                                    <option value="Appliances">
+                                      Appliances
+                                    </option>
+                                    <option value="AutomotiveAccessories">
+                                      Automotive Accessories
+                                    </option>
+                                    <option value="Electronics">
+                                      Electronics
+                                    </option>
+                                    <option value="Fashion">Fashion</option>
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Footwear">Footwear</option>
+                                    <option value="Sportswear">
+                                      Sportswear
+                                    </option>
+                                    <option value="Watches">Watches</option>
+                                    <option value="Headphones">
+                                      Headphones
+                                    </option>
+                                    <option value="(new)">Other</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-6" id="othcateproduct">
+                                  <div class="mb-3">
+                                    <label
+                                      for="productothcate"
+                                      class="form-label"
+                                      >Entery Your Product Category
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <input
+                                      type="text"
+                                      value=""
+                                      name=""
+                                      id="productothcate"
+                                      class="form-control"
+                                      placeholder="Entery your product category"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="mb-3">
+                                    <label for="productType" class="form-label"
+                                      >Product Type
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      data-choices
+                                      name="productType"
+                                      id="productType"
+                                      onclick="return prChange(this);"
+                                    >
+                                      <option value="">Select Type</option>
+                                      <option value="Simple">Simple</option>
+                                      <option value="Classified">
+                                        Classified
+                                      </option>
+                                      <option value="(pnew)">Other</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-6" id="productnew">
+                                  <div class="mb-3">
+                                    <label
+                                      for="productothcate"
+                                      class="form-label"
+                                      >Add New Product Type
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <input
+                                      type="text"
+                                      value=""
+                                      name=""
+                                      id="productothcate"
+                                      class="form-control"
+                                      placeholder="Add new product type"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="mb-3">
+                                    <label for="productBrand" class="form-label"
+                                      >Brand
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      data-choices
+                                      name="productType"
+                                      id="productType"
+                                      onclick="return brandChange(this);"
+                                    >
+                                      <option value="">Select Brand</option>
+                                      <option value="Simple">Brand 1</option>
+                                      <option value="Classified">
+                                        Brand 2
+                                      </option>
+                                      <option value="(brandnew)">Other</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-6" id="brandsnew">
+                                  <div class="mb-3">
+                                    <label
+                                      for="productothcate"
+                                      class="form-label"
+                                      >Add New Brand
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <input
+                                      type="text"
+                                      value=""
+                                      name=""
+                                      id="productothcate"
+                                      class="form-control"
+                                      placeholder="Add new brand"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="mb-3">
+                                    <label for="productkg" class="form-label"
+                                      >Varient<span class="text-danger"
+                                        >*</span
+                                      ></label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      data-choices
+                                      name="productkg"
+                                      id="productkg"
+                                      onclick="return varientChange(this);"
+                                    >
+                                      <option value="">Select Varient</option>
+                                      <option value="">5 Kg</option>
+                                      <option value="">10 Kg</option>
+                                      <option value="">20 Kg</option>
+                                      <option value="">50 Kg</option>
+                                      <option value="">100 Kg</option>
+                                      <option value="(vnew)">Other</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-6" id="varientsnew">
+                                  <div class="mb-3">
+                                    <label
+                                      for="productothcate"
+                                      class="form-label"
+                                      >Add New Varient
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <input
+                                      type="text"
+                                      value=""
+                                      name=""
+                                      id="productothcate"
+                                      class="form-control"
+                                      placeholder="Add new varient"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <div class="mb-3">
+                                    <label for="productUnit" class="form-label"
+                                      >Unit
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      data-choices
+                                      name="productUnit"
+                                      id="productUnit"
+                                    >
+                                      <option value="">Select Unit</option>
+                                      <option value="gram">Gram</option>
+                                      <option value="Kilogram">Kilogram</option>
+                                      <option value="Pieces">Pieces</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <label for="productStyle" class="form-label"
+                                    >Style</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="productStyle"
+                                    placeholder="Product Style"
+                                  />
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="mb-4">
+                                    <label for="productColor" class="form-label"
+                                      >Color</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="productColor"
+                                      placeholder="Product Color"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="mb-3">
+                                    <label for="productTitle" class="form-label"
+                                      >Product Title
+                                      <span class="text-danger">*</span></label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="productTitle"
+                                      placeholder="Enter product title"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <div class="col-lg-6">
+                                  <div>
+                                    <label
+                                      class="form-label"
+                                      for="product-price-input"
+                                      >Price</label
+                                    >
+                                    <div class="input-group has-validation">
+                                      <span
+                                        class="input-group-text"
+                                        id="product-price-addon"
+                                        >₹</span
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="product-price-input"
+                                        placeholder="Enter price"
+                                        aria-label="Price"
+                                        aria-describedby="product-price-addon"
+                                        required=""
+                                      />
+                                      <div class="invalid-feedback">
+                                        Please Enter a product price.
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--end col-->
+                                <div class="col-lg-6">
+                                  <div>
+                                    <label
+                                      class="form-label"
+                                      for="product-discount-input"
+                                      >Discount</label
+                                    >
+                                    <div class="input-group">
+                                      <span
+                                        class="input-group-text"
+                                        id="product-discount-addon"
+                                        >%</span
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="product-discount-input"
+                                        placeholder="Enter discount"
+                                        aria-label="discount"
+                                        aria-describedby="product-discount-addon"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--end col-->
+                              </div>
+                              <div class="mb-3">
+                                <label for="shortDecs" class="form-label"
+                                  >Short Description
+                                  <span class="text-danger">*</span></label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="shortDecs"
+                                  placeholder="Must enter minimum of a 100 characters"
+                                  rows="3"
+                                ></textarea>
+                              </div>
+
+                              <div class="mb-3">
+                                <label class="form-label">Tags</label>
+                                <input
+                                  class="form-control"
+                                  id="choices-text-unique-values"
+                                  data-choices
+                                  data-choices-text-unique-true
+                                  data-choices-removeItem
+                                  type="text"
+                                  value="Fashion, Style, Brands, Puma"
+                                />
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="form-check form-switch mb-3">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="exchangeableInput"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="exchangeableInput"
+                                      >Exchangeable</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="form-check form-switch mb-3">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="refundableInput"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="refundableInput"
+                                      >Refundable</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--end col-->
+                          </div>
+                          <!--end row-->
+                        </div>
+                      </div>
+                      <!--end tab-pane-->
+                      <div class="tab-pane" id="prdescriptions" role="tabpanel">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div>
+                                <label class="form-label"
+                                  >Product Description
+                                  <span class="text-danger">*</span></label
+                                >
+                                <div class="ckeditor-classic"></div>
+                              </div>
+                            </div>
+                            <!--end col-->
+                          </div>
+                          <!--end row-->
+                        </div>
+                      </div>
+                      <!--end tab-pane-->
+                      <div class="tab-pane" id="proimages" role="tabpanel">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Product Images
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="dropzone text-center">
+                                    <div class="fallback">
+                                      <input
+                                        name="file"
+                                        type="file"
+                                        multiple="multiple"
+                                      />
+                                    </div>
+                                    <div class="dz-message needsclick">
+                                      <div class="mb-3">
+                                        <i
+                                          class="display-4 text-muted ri-upload-cloud-2-fill"
+                                        ></i>
+                                      </div>
+
+                                      <h4>
+                                        Drop product images here or click to
+                                        upload.
+                                      </h4>
+                                    </div>
+                                  </div>
+
+                                  <ul
+                                    class="list-unstyled mb-0"
+                                    id="dropzone-preview"
+                                  >
+                                    <li class="mt-2" id="dropzone-preview-list">
+                                      <!-- This is used as the file preview template -->
+                                      <div class="border rounded">
+                                        <div class="d-flex p-2">
+                                          <div class="flex-shrink-0 me-3">
+                                            <div
+                                              class="avatar-sm bg-light rounded"
+                                            >
+                                              <img
+                                                data-dz-thumbnail
+                                                class="img-fluid rounded d-block"
+                                                src="assets/images/new-document.png"
+                                                alt="Dropzone-Image"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div class="flex-grow-1">
+                                            <div class="pt-1">
+                                              <h5
+                                                class="fs-md mb-1"
+                                                data-dz-name
+                                              >
+                                                &nbsp;
+                                              </h5>
+                                              <p
+                                                class="fs-sm text-muted mb-0"
+                                                data-dz-size
+                                              ></p>
+                                              <strong
+                                                class="error text-danger"
+                                                data-dz-errormessage
+                                              ></strong>
+                                            </div>
+                                          </div>
+                                          <div class="flex-shrink-0 ms-3">
+                                            <button
+                                              data-dz-remove
+                                              class="btn btn-sm btn-danger"
+                                            >
+                                              Delete
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  <!-- end dropzon-preview -->
+                                </div>
+
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Gallery Images
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div
+                                    class="dropzone text-center"
+                                    id="dropzone"
+                                  >
+                                    <div class="fallback">
+                                      <input
+                                        name="file"
+                                        type="file"
+                                        multiple="multiple"
+                                      />
+                                    </div>
+                                    <div class="dz-message needsclick">
+                                      <div class="mb-3">
+                                        <i
+                                          class="display-4 text-muted ri-upload-cloud-2-fill"
+                                        ></i>
+                                      </div>
+
+                                      <h4>
+                                        Drop gallery images here or click to
+                                        upload.
+                                      </h4>
+                                    </div>
+                                  </div>
+
+                                  <ul
+                                    class="list-unstyled mb-0"
+                                    id="dropzone-preview2"
+                                  >
+                                    <li
+                                      class="mt-2"
+                                      id="dropzone-preview-list2"
+                                    >
+                                      <!-- This is used as the file preview template -->
+                                      <div class="border rounded">
+                                        <div class="d-flex p-2">
+                                          <div class="flex-shrink-0 me-3">
+                                            <div
+                                              class="avatar-sm bg-light rounded"
+                                            >
+                                              <img
+                                                data-dz-thumbnail
+                                                class="img-fluid rounded d-block"
+                                                src="assets/images/new-document.png"
+                                                alt="Dropzone-Image"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div class="flex-grow-1">
+                                            <div class="pt-1">
+                                              <h5
+                                                class="fs-md mb-1"
+                                                data-dz-name
+                                              >
+                                                &nbsp;
+                                              </h5>
+                                              <p
+                                                class="fs-sm text-muted mb-0"
+                                                data-dz-size
+                                              ></p>
+                                              <strong
+                                                class="error text-danger"
+                                                data-dz-errormessage
+                                              ></strong>
+                                            </div>
+                                          </div>
+                                          <div class="flex-shrink-0 ms-3">
+                                            <button
+                                              data-dz-remove
+                                              class="btn btn-sm btn-danger"
+                                            >
+                                              Delete
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  <!-- end dropzon-preview -->
+                                </div>
+                              </div>
+                            </div>
+                            <!--end col-->
+                          </div>
+                          <!--end row-->
+                        </div>
+                      </div>
+                      <!--end tab-pane-->
+                      <div
+                        class="tab-pane"
+                        id="technicaldetials"
+                        role="tabpanel"
+                      >
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card">
+                                <div class="row gy-3">
+                                  <div class="col-lg-6">
+                                    <div>
+                                      <label
+                                        for="manufacturer-name-input"
+                                        class="form-label"
+                                        >Material</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="manufacturer-name-input"
+                                        placeholder="Enter material name"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                  <div class="col-lg-6">
+                                    <div>
+                                      <label
+                                        class="form-label"
+                                        for="manufacturer-brand-input"
+                                        >Water Resistance Level</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="manufacturer-brand-input"
+                                        placeholder="Enter mater resistance level"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productStocks"
+                                        class="form-label"
+                                        >Item Form</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productStocks"
+                                        placeholder="Item Form"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productweight"
+                                        class="form-label"
+                                        >Item Weight</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productweight"
+                                        placeholder="Item Weight"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productDimensions"
+                                        class="form-label"
+                                        >Item Dimensions LxWxH</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productDimensions"
+                                        placeholder="12 x 16 x 5 Centimeters"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productprtnum"
+                                        class="form-label"
+                                        >Item part number</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productprtnum"
+                                        placeholder="Item part number"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productDimensionstwo"
+                                        class="form-label"
+                                        >Product Dimensions</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productDimensionstwo"
+                                        placeholder="12 x 16 x 5 cm; 1 Kilograms"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productcouori"
+                                        class="form-label"
+                                        >Country of Origin</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productcouori"
+                                        placeholder="Country of origin"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productcouori"
+                                        class="form-label"
+                                        >Country of Origin</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productcouori"
+                                        placeholder="Country of origin"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="choices-publish-status-input"
+                                        class="form-label"
+                                        >Status</label
+                                      >
+                                      <select
+                                        class="form-select"
+                                        id="choices-publish-status-input"
+                                        data-choices
+                                        data-choices-search-false
+                                      >
+                                        <option value="Published" selected>
+                                          Published
+                                        </option>
+                                        <option value="Scheduled">
+                                          Scheduled
+                                        </option>
+                                        <option value="Draft">Draft</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="choices-publish-visibility-input"
+                                        class="form-label"
+                                        >Visibility</label
+                                      >
+                                      <select
+                                        class="form-select"
+                                        id="choices-publish-visibility-input"
+                                        data-choices
+                                        data-choices-search-false
+                                      >
+                                        <option value="Public" selected>
+                                          Public
+                                        </option>
+                                        <option value="Hidden">Hidden</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                </div>
+                                <!--end row-->
+                              </div>
+                            </div>
+                            <!--end col-->
+                          </div>
+                          <!--end row-->
+                        </div>
+                      </div>
+                      <!--end tab-pane-->
+                      <div class="tab-pane" id="addinfor" role="tabpanel">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card">
+                                <div class="row gy-3">
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="product-manufacturer"
+                                        class="form-label"
+                                        >Manufacturer</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="product-manufacturer"
+                                        placeholder="Enter manufacturer"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        class="form-label"
+                                        for="productPacker"
+                                        >Packer</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productPacker"
+                                        placeholder="Enter packer"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--end col-->
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productimporter"
+                                        class="form-label"
+                                        >Importer</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productimporter"
+                                        placeholder="Importer name"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productquantity"
+                                        class="form-label"
+                                        >Net Quantity</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productquantity"
+                                        placeholder="1000.00 millilitre"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productGname"
+                                        class="form-label"
+                                        >Generic Name</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productGname"
+                                        placeholder="Tile Grout Cement Based | Polymerised Tile Joint Filler"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div>
+                                      <label
+                                        for="productsellerrank"
+                                        class="form-label"
+                                        >Best Sellers Rank</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="productsellerrank"
+                                        placeholder="#2,957 in Industrial & Scientific"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--end col-->
+                          </div>
+                        </div>
+                      </div>
+                      <!--end tab-pane-->
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+
+              <!--end row-->
+
+              <div class="hstack gap-2 justify-content-end mb-3">
+                <button class="btn btn-thm">Submit</button>
+                <button class="btn btn-danger">
+                  <i class="ph-x align-middle"></i> Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                © Anuda Mart.
+              </div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  Design & Develop by Anuda Mart
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button class="btn btn-dark btn-icon" id="back-to-top">
+      <i class="bi bi-caret-up fs-3xl"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- dropzone min -->
+    <script src="assets/libs/dropzone/dropzone-min.js"></script>
+
+    <!-- ckeditor -->
+    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+    <!-- init js -->
+    <script src="assets/js/pages/ecommerce-create-product.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script>
+      function catChange(elm) {
+        if ($(elm).val() === "(new)") {
+          $("#othcateproduct").css("display", "block");
+        } else {
+          $("#othcateproduct").css("display", "none");
+        }
+        return false;
+      }
+      function prChange(elm) {
+        if ($(elm).val() === "(pnew)") {
+          $("#productnew").css("display", "block");
+        } else {
+          $("#productnew").css("display", "none");
+        }
+        return false;
+      }
+      function brandChange(elm) {
+        if ($(elm).val() === "(brandnew)") {
+          $("#brandsnew").css("display", "block");
+        } else {
+          $("#brandsnew").css("display", "none");
+        }
+        return false;
+      }
+      function varientChange(elm) {
+        if ($(elm).val() === "(vnew)") {
+          $("#varientsnew").css("display", "block");
+        } else {
+          $("#varientsnew").css("display", "none");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

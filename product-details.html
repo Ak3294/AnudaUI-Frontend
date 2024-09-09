@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-preloader="disable"
+  data-theme="default"
+  data-topbar="light"
+  data-bs-theme="light"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Anuda Mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <!-- Fonts css load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      id="fontsLink"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Swiper slider css-->
+    <link
+      href="assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- dropzone css -->
+    <link
+      href="assets/libs/dropzone/dropzone.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <!-- ========== App Menu ========== -->
+      <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+          <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+              <img
+                src="assets/images/white-logo.png"
+                alt="white-logo"
+                height="33"
+              />
+            </span>
+            <span class="logo-lg">
+              <img src="assets/images/logo.png" alt="logo" height="40" />
+            </span>
+          </a>
+          <button
+            type="button"
+            class="btn btn-sm p-0 fs-3xl header-item float-end btn-vertical-sm-hover"
+            id="vertical-hover"
+          >
+            <i class="ri-record-circle-line"></i>
+          </button>
+        </div>
+
+        <div id="scrollbar">
+          <div class="container-fluid">
+            <div id="two-column-menu"></div>
+            <ul class="navbar-nav" id="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  <i class="ph-gauge"></i>
+                  <span data-key="t-dashboards">Dashboards</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarEcommerce"
+                  class="nav-link menu-link collapsed"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarEcommerce"
+                >
+                  <i class="ph-storefront"></i>
+                  <span data-key="t-ecommerce">Product</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarEcommerce">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="products.html"
+                        class="nav-link"
+                        data-key="t-products"
+                        >Products</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="add-product.html"
+                        class="nav-link"
+                        data-key="t-create-product"
+                        >Add Product</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="orders.html" class="nav-link" data-key="t-orders"
+                        >Orders</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="order-overview.html"
+                        class="nav-link"
+                        data-key="t-order-overview"
+                        >Order Overview</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link menu-link">
+                  <i class="ph-user-circle"></i>
+                  <span data-key="t-calendar">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customers.html" class="nav-link menu-link"
+                  ><i class="bi bi-people"></i>
+                  <span data-key="t-calendar">Customers</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarInvoices"
+                  class="nav-link menu-link"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarInvoices"
+                >
+                  <i class="ph-file-text"></i>
+                  <span data-key="t-invoices">Invoices</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarInvoices">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="invoices-list.html"
+                        class="nav-link"
+                        data-key="t-list-view"
+                        >List View</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="invoices-overview.html"
+                        class="nav-link"
+                        data-key="t-overview"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="create-invoices.html"
+                        class="nav-link"
+                        data-key="t-create-invoice"
+                        >Create Invoice</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="transactions.html" class="nav-link menu-link">
+                  <i class="ph ph-credit-card"></i>
+                  <span data-key="t-calendar">Transactions</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link menu-link">
+                  <i class="ph ph-sign-out"></i>
+                  <span data-key="t-calendar">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+
+        <div class="sidebar-background"></div>
+      </div>
+      <!-- Left Sidebar End -->
+      <!-- Vertical Overlay-->
+      <div class="vertical-overlay"></div>
+      <header id="page-topbar">
+        <div class="layout-width">
+          <div class="navbar-header">
+            <div class="d-flex">
+              <!-- LOGO -->
+              <div class="navbar-brand-box horizontal-logo">
+                <a href="index.html" class="logo logo-light">
+                  <span class="logo-sm">
+                    <img
+                      src="assets/images/white-logo.png"
+                      alt=""
+                      height="30"
+                    />
+                  </span>
+                  <span class="logo-lg">
+                    <img src="assets/images/logo.png" alt="" height="30" />
+                  </span>
+                </a>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none"
+                id="topnav-hamburger-icon"
+              >
+                <span class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <img
+                  src="assets/images/favicon.png"
+                  alt="logo"
+                  height="30"
+                  style="margin-left: 20px"
+                  class="m-logo"
+                />
+              </button>
+
+              <form class="app-search d-none d-md-inline-flex">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    autocomplete="off"
+                    id="search-options"
+                    value=""
+                  />
+                  <span class="mdi mdi-magnify search-widget-icon"></span>
+                  <span
+                    class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                    id="search-close-options"
+                  ></span>
+                </div>
+                <div
+                  class="dropdown-menu dropdown-menu-lg"
+                  id="search-dropdown"
+                >
+                  <div data-simplebar style="max-height: 320px">
+                    <!-- item-->
+                    <div class="dropdown-header">
+                      <h6 class="text-overflow text-muted mb-0 text-uppercase">
+                        Recent Searches
+                      </h6>
+                    </div>
+
+                    <div class="dropdown-item bg-transparent text-wrap">
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >how to setup <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >buttons <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                    </div>
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-1 text-uppercase">
+                        Pages
+                      </h6>
+                    </div>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Analytics Dashboard</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Help Center</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-user-settings-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>My account settings</span>
+                    </a>
+
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-2 text-uppercase">
+                        Members
+                      </h6>
+                    </div>
+
+                    <div class="notification-list">
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-2.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Angela Bernier</h6>
+                            <span class="fs-11 mb-0 text-muted">Manager</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-3.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">David Grasso</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >Web Designer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-5.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Mike Bunch</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >React Developer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="text-center pt-3 pb-1">
+                    <a href="#" class="btn btn-primary btn-sm"
+                      >View All Results <i class="ri-arrow-right-line ms-1"></i
+                    ></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div
+                class="dropdown topbar-head-dropdown ms-1 header-item"
+                id="notificationDropdown"
+              >
+                <button
+                  type="button"
+                  class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle"
+                  id="page-header-notifications-dropdown"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-bell fs-2xl"></i>
+                  <span
+                    class="position-absolute topbar-badge fs-3xs translate-middle badge rounded-pill bg-danger"
+                    ><span class="notification-badge">4</span
+                    ><span class="visually-hidden">unread messages</span></span
+                  >
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  aria-labelledby="page-header-notifications-dropdown"
+                >
+                  <div class="dropdown-head rounded-top">
+                    <div class="p-3 border-bottom border-bottom-dashed">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <h6 class="mb-0 fs-lg fw-semibold">
+                            Notifications
+                            <span
+                              class="badge bg-danger-subtle text-danger fs-sm notification-badge"
+                            >
+                              4</span
+                            >
+                          </h6>
+                          <p class="fs-md text-muted mt-1 mb-0">
+                            You have
+                            <span class="fw-semibold notification-unread"
+                              >3</span
+                            >
+                            unread messages
+                          </p>
+                        </div>
+                        <div class="col-auto dropdown">
+                          <a
+                            href="javascript:void(0);"
+                            data-bs-toggle="dropdown"
+                            class="link-secondary fs-md"
+                            ><i class="bi bi-three-dots-vertical"></i
+                          ></a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">All Clear</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Mark all as read</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Archive All</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-2 ps-2" id="notificationItemsTabContent">
+                    <div data-simplebar style="max-height: 300px" class="pe-2">
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        New
+                      </h6>
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-info-subtle text-info rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-badge-check"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 fs-md mb-2 lh-base">
+                                Your <b>Elite</b> author Graphic Optimization
+                                <span class="text-secondary">reward</span> is
+                                ready!
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> Just 30
+                                sec ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check01"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check01"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-2.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-success rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Angela Bernier
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                Answered to your comment on the cash flow
+                                forecast's graph 🔔.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 48 min
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check02"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check02"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-danger-subtle text-danger rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-message-square-dots"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-2 fs-md lh-base">
+                                You have received
+                                <b class="text-success">20</b> new messages in
+                                the conversation
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 2 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check03"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check03"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        Read Before
+                      </h6>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-8.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-warning rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Maureen Gibson
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                We talked about a project on linkedin.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 4 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check04"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check04"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="notification-actions" id="notification-actions">
+                      <div
+                        class="d-flex text-muted justify-content-center align-items-center"
+                      >
+                        Select
+                        <div
+                          id="select-content"
+                          class="text-body fw-semibold px-1"
+                        >
+                          0
+                        </div>
+                        Result
+                        <button
+                          type="button"
+                          class="btn btn-link link-danger p-0 ms-2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeNotificationModal"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown ms-sm-3 header-item topbar-user">
+                <button
+                  type="button"
+                  class="btn shadow-none"
+                  id="page-header-user-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle header-profile-user"
+                      src="assets/images/users/32/avatar-1.jpg"
+                      alt="Header Avatar"
+                    />
+                    <span class="text-start ms-xl-2">
+                      <span
+                        class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                        >Richard Marshall</span
+                      >
+                    </span>
+                  </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <!-- item-->
+                  <h6 class="dropdown-header">Welcome Richard!</h6>
+                  <a class="dropdown-item" href="profile.html"
+                    ><i
+                      class="mdi mdi-account-circle text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Profile</span></a
+                  >
+                  <a class="dropdown-item" href="change-password.html"
+                    ><i
+                      class="mdi mdi-lock-outline text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Change Password</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="auth-logout.html"
+                    ><i
+                      class="mdi mdi-logout text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle" data-key="t-logout"
+                      >Logout</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- removeNotificationModal -->
+      <div
+        id="removeNotificationModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="NotificationModalbtn-close"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-4"></i>
+                </div>
+                <div class="mt-4 fs-base">
+                  <h4 class="mb-1">Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this Notification ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="delete-notification"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- removeCartModal -->
+      <div
+        id="removeCartModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="close-cartmodal"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-5"></i>
+                </div>
+                <div class="mt-4">
+                  <h4>Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this product ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="remove-cartproduct"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between"
+                >
+                  <h4 class="mb-sm-0">Product Overview</h4>
+
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a href="javascript: void(0);">Ecommerce</a>
+                      </li>
+                      <li class="breadcrumb-item active">Product Overview</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+              <div class="col-xxl-4">
+                <div class="card p-3 sticky-side-div">
+                  <div class="product-img-slider">
+                    <div
+                      class="swiper product-thumbnail-slider p-2 rounded bg-light"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="p-5 mx-4">
+                            <img
+                              src="assets/images/products/img-1.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="p-5 mx-4">
+                            <img
+                              src="assets/images/products/img-7.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="p-5 mx-4">
+                            <img
+                              src="assets/images/products/img-8.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="p-5 mx-4">
+                            <img
+                              src="assets/images/products/img-10.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="p-5 mx-4">
+                            <img
+                              src="assets/images/products/img-6.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                    <!-- end swiper thumbnail slide -->
+                    <div class="swiper product-nav-slider mt-2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="nav-slide-item">
+                            <img
+                              src="assets/images/products/img-1.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="nav-slide-item">
+                            <img
+                              src="assets/images/products/img-7.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="nav-slide-item">
+                            <img
+                              src="assets/images/products/img-8.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="nav-slide-item">
+                            <img
+                              src="assets/images/products/img-10.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="nav-slide-item">
+                            <img
+                              src="assets/images/products/img-6.png"
+                              alt=""
+                              class="img-fluid d-block"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end swiper nav slide -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-8">
+                <div class="row g-0">
+                  <div class="col-xxl-8">
+                    <div class="card rounded-end-0">
+                      <div class="card-body p-4">
+                        <p class="text-muted float-md-end mb-md-0">
+                          <a href="#!"
+                            ><i class="ph-storefront align-middle me-1"></i>
+                            Visit Store</a
+                          >
+                        </p>
+                        <h4 class="text-capitalize mb-3">
+                          Unite wear solid men hooded neck blue T-shirt
+                        </h4>
+                        <div class="hstack gap-3 flex-wrap mb-4">
+                          <div class="text-muted">
+                            <b class="text-body fw-medium">3.7k</b> Sold
+                          </div>
+                          <div class="vr"></div>
+                          <div class="text-muted">
+                            <b class="text-body fw-medium">3.5k</b> Reviews
+                          </div>
+                          <div class="vr"></div>
+                          <div class="text-muted">
+                            Published :
+                            <span class="text-body fw-medium"
+                              >26 Mar, 2021</span
+                            >
+                          </div>
+                        </div>
+
+                        <h6 class="fs-md mb-3">Choose Size:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                          <div
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="hover"
+                            data-bs-placement="top"
+                            data-bs-original-title="Out of Stock"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="productsize-radio"
+                              id="productsize-radio1"
+                              disabled
+                            />
+                            <label
+                              class="btn btn-subtle-primary avatar-xs rounded-circle p-0 d-flex justify-content-center align-items-center"
+                              for="productsize-radio1"
+                              >S</label
+                            >
+                          </div>
+
+                          <div
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="hover"
+                            data-bs-placement="top"
+                            data-bs-original-title="04 Items Available"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="productsize-radio"
+                              id="productsize-radio2"
+                            />
+                            <label
+                              class="btn btn-subtle-primary avatar-xs rounded-circle p-0 d-flex justify-content-center align-items-center"
+                              for="productsize-radio2"
+                              >M</label
+                            >
+                          </div>
+                          <div
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="hover"
+                            data-bs-placement="top"
+                            data-bs-original-title="06 Items Available"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="productsize-radio"
+                              id="productsize-radio3"
+                            />
+                            <label
+                              class="btn btn-subtle-primary avatar-xs rounded-circle p-0 d-flex justify-content-center align-items-center"
+                              for="productsize-radio3"
+                              >L</label
+                            >
+                          </div>
+
+                          <div
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="hover"
+                            data-bs-placement="top"
+                            data-bs-original-title="Out of Stock"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="productsize-radio"
+                              id="productsize-radio4"
+                              disabled
+                            />
+                            <label
+                              class="btn btn-subtle-primary avatar-xs rounded-circle p-0 d-flex justify-content-center align-items-center"
+                              for="productsize-radio4"
+                              >XL</label
+                            >
+                          </div>
+
+                          <div
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="hover"
+                            data-bs-placement="top"
+                            data-bs-original-title="08 Items Available"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="productsize-radio"
+                              id="productsize-radio5"
+                            />
+                            <label
+                              class="btn btn-subtle-primary avatar-xs rounded-circle p-0 d-flex justify-content-center align-items-center"
+                              for="productsize-radio5"
+                              >2xl</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="mt-4">
+                          <h5 class="fs-md mb-3">Colors :</h5>
+                          <div class="d-flex flex-wrap gap-2">
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="Out of Stock"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-primary"
+                                disabled=""
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="03 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-secondary"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="03 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-success"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="02 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-info"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="01 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-warning"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="04 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-danger"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="03 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-light"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                            <div
+                              data-bs-toggle="tooltip"
+                              data-bs-trigger="hover"
+                              data-bs-placement="top"
+                              data-bs-original-title="04 Items Available"
+                            >
+                              <button
+                                type="button"
+                                class="btn avatar-xs p-0 d-flex align-items-center justify-content-center border rounded-circle fs-5xl text-dark"
+                              >
+                                <i class="ri-checkbox-blank-circle-fill"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-4">
+                          <h5 class="fs-md mb-3">Shipping Information:</h5>
+                          <p class="text-muted mb-2">
+                            <b>Delivery Location</b>
+                          </p>
+                          <p class="text-muted mb-0">
+                            A thicker knit T-Shirt with a rag cut edge and
+                            sleeves and a printed muscle man on the back, you
+                            will feel #ULTRA in one of these.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end card-->
+                  </div>
+                  <!--end col-->
+                  <div class="col-xxl-4">
+                    <div
+                      class="card card-height-100 border-start rounded-start-0"
+                    >
+                      <div class="card-body p-4">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="card card-primary">
+                              <div class="card-body d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                  <h5 class="card-title text-white fs-xl">
+                                    25% Off
+                                  </h5>
+                                  <p class="mb-0 text-white-50">
+                                    If order over $120
+                                  </p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                  >
+                                    Util 10 Feb, 2024
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--end col-->
+                          <div class="col-lg-12">
+                            <div class="row g-3">
+                              <div class="col-md-6">
+                                <div class="card border shadow-none mb-0">
+                                  <div class="card-body p-2">
+                                    <div class="text-center">
+                                      <p class="text-muted text-truncate mb-2">
+                                        PRICE
+                                      </p>
+                                      <h6 class="fs-lg">$245.99</h6>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end col-->
+                              <div class="col-md-6">
+                                <div class="card border shadow-none mb-0">
+                                  <div class="card-body p-2">
+                                    <div class="text-center">
+                                      <p class="text-muted text-truncate mb-2">
+                                        No. of Orders
+                                      </p>
+                                      <h6 class="fs-lg">3.7k</h6>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end col-->
+                              <div class="col-md-6">
+                                <div class="card border shadow-none mb-0">
+                                  <div class="card-body p-2">
+                                    <div class="text-center">
+                                      <p class="text-muted text-truncate mb-2">
+                                        Available Stocks
+                                      </p>
+                                      <h6 class="fs-lg">764</h6>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end col-->
+                              <div class="col-md-6">
+                                <div class="card border shadow-none mb-0">
+                                  <div class="card-body p-2">
+                                    <div class="text-center">
+                                      <p class="text-muted text-truncate mb-2">
+                                        Total Revenue
+                                      </p>
+                                      <h6 class="fs-lg">$59,239</h6>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end col-->
+                            </div>
+                            <!--end row-->
+                          </div>
+                          <!--end col-->
+                        </div>
+                        <!--end row-->
+                        <div class="mt-4 d-flex gap-2">
+                          <button type="button" class="btn btn-primary w-100">
+                            Edit
+                          </button>
+                          <button type="button" class="btn btn-danger w-100">
+                            <i class="ph-trash align-middle me-1"></i> Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+                <div class="card">
+                  <div class="card-body p-4">
+                    <div>
+                      <h5 class="fs-md mb-3">Description:</h5>
+                      <p class="text-muted mb-2">
+                        A <b>hoodie</b> is a sweatshirt with a hood attached
+                        that may also have a kangaroo pocket or full zipper. A
+                        sweatshirt is a long-sleeved pullover shirt fashioned
+                        out of thick, usually cotton cloth material. Sweatshirts
+                        are almost exclusively casual attire and hence not as
+                        dressy as some sweaters.
+                      </p>
+                      <p class="text-muted">
+                        A thicker knit T-Shirt with a rag cut edge and sleeves
+                        and a printed muscle man on the back, you will feel
+                        #ULTRA in one of these.
+                      </p>
+                    </div>
+
+                    <div class="mt-4">
+                      <h5 class="fs-md mb-3">Product Details:</h5>
+                      <div class="table-responsive">
+                        <table
+                          class="table table-sm table-borderless align-middle description-table mb-0"
+                        >
+                          <tbody>
+                            <tr>
+                              <th>Type</th>
+                              <td>Stripped shirts</td>
+                            </tr>
+                            <tr>
+                              <th>Sleeve</th>
+                              <td>Full Sleeve</td>
+                            </tr>
+                            <tr>
+                              <th>Country of Origin</th>
+                              <td>California</td>
+                            </tr>
+                            <tr>
+                              <th>Pack of</th>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <th>Style</th>
+                              <td>Modern</td>
+                            </tr>
+                            <tr>
+                              <th>Style Code</th>
+                              <td>TBS037</td>
+                            </tr>
+                            <tr>
+                              <th>Generic Name</th>
+                              <td>Formal Shirt</td>
+                            </tr>
+                            <tr>
+                              <th>Ideal For</th>
+                              <td>Men</td>
+                            </tr>
+                            <tr>
+                              <th>Size</th>
+                              <td>All Available</td>
+                            </tr>
+                            <tr>
+                              <th>Suitable For</th>
+                              <td>Formal Wear,Party Wear</td>
+                            </tr>
+                            <tr>
+                              <th>Seller</th>
+                              <td>Zibra Fashion</td>
+                            </tr>
+                            <tr>
+                              <th>Fabric</th>
+                              <td>Cotton</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div
+                    class="card-header d-flex flex-wrap align-items-center gap-3 mb-2"
+                  >
+                    <h6 class="card-title flex-grow-1 mb-0">
+                      Ratings & Reviews
+                    </h6>
+                    <div class="flex-shrink-0">
+                      <div class="dropdown card-header-dropdown">
+                        <a
+                          class="text-muted dropdown-btn"
+                          href="#"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          This Month <i class="mdi mdi-chevron-down ms-1"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#">Today</a>
+                          <a class="dropdown-item" href="#">Yesterday</a>
+                          <a class="dropdown-item" href="#">Last 7 Days</a>
+                          <a class="dropdown-item" href="#">Last 30 Days</a>
+                          <a class="dropdown-item" href="#">This Month</a>
+                          <a class="dropdown-item" href="#">Last Month</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addReview"
+                      >
+                        <i class="ph-plus-circle align-middle me-1"></i> Add
+                        Review
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row gy-3">
+                      <div class="col-lg-2">
+                        <div class="text-center mt-3 mt-lg-5">
+                          <h1 class="mb-3">
+                            4.9
+                            <small class="fs-sm text-muted fw-normal"
+                              >/ 5.0</small
+                            >
+                          </h1>
+                          <div
+                            class="text-warning hstack gap-2 justify-content-center mb-2"
+                          >
+                            <i class="bi bi-star-fill align-baseline"></i>
+                            <i class="bi bi-star-fill align-baseline"></i>
+                            <i class="bi bi-star-fill align-baseline"></i>
+                            <i class="bi bi-star-fill align-baseline"></i>
+                            <i class="bi bi-star-fill align-baseline"></i>
+                          </div>
+                          <p class="mb-0"><b>3.5k</b> Reviews</p>
+                        </div>
+                      </div>
+                      <!--end col-->
+                      <div class="col-lg-10">
+                        <div>
+                          <div
+                            class="me-lg-n3 pe-lg-4"
+                            data-simplebar
+                            style="max-height: 500px"
+                          >
+                            <ul class="list-unstyled mb-0" id="review-list">
+                              <li class="review-list py-2" id="review-1">
+                                <div class="border border-dashed rounded p-3">
+                                  <div class="hstack flex-wrap gap-3 mb-4">
+                                    <div
+                                      class="badge rounded-pill bg-danger-subtle text-danger mb-0"
+                                    >
+                                      <i class="mdi mdi-star"></i>
+                                      <span class="rate-num">4.5</span>
+                                    </div>
+                                    <div class="vr"></div>
+                                    <div class="flex-grow-1">
+                                      <p class="mb-0">
+                                        <a href="#!">Jansh Brown</a>
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <span class="text-muted fs-13 mb-0"
+                                        >08 Mar, 2023</span
+                                      >
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <a
+                                        href="#addReview"
+                                        class="badge bg-secondary-subtle text-secondary edit-item-list"
+                                        data-bs-toggle="modal"
+                                        ><i
+                                          class="ph-pencil align-baseline me-1"
+                                        ></i>
+                                        Edit</a
+                                      >
+                                      <a
+                                        href="#removeItemModal"
+                                        class="badge bg-danger-subtle text-danger"
+                                        data-bs-toggle="modal"
+                                        ><i class="ph-trash align-baseline"></i
+                                      ></a>
+                                    </div>
+                                  </div>
+
+                                  <h6 class="review-title fs-md">
+                                    Product Quality
+                                  </h6>
+                                  <p class="review-desc mb-0">
+                                    " This is an incredible framework worth so
+                                    much in the right hands! Nowhere else are
+                                    you going to get so much flexibility and
+                                    great code for a few dollars. Highly
+                                    recommend purchasing today! Like right now!
+                                    "
+                                  </p>
+
+                                  <div
+                                    class="d-flex flex-grow-1 gap-2 review-gallery-img"
+                                  >
+                                    <a href="#" class="avatar-md mt-3">
+                                      <div
+                                        class="avatar-title bg-light rounded"
+                                      >
+                                        <img
+                                          src="assets/images/products/img-1.png"
+                                          alt="img-1.png"
+                                          class="product-img avatar-sm"
+                                        />
+                                      </div>
+                                    </a>
+                                    <a href="#" class="avatar-md mt-3">
+                                      <div
+                                        class="avatar-title bg-light rounded"
+                                      >
+                                        <img
+                                          src="assets/images/products/img-6.png"
+                                          alt="img-6.png"
+                                          class="product-img avatar-sm"
+                                        />
+                                      </div>
+                                    </a>
+                                    <a href="#" class="avatar-md mt-3">
+                                      <div
+                                        class="avatar-title bg-light rounded"
+                                      >
+                                        <img
+                                          src="assets/images/products/img-7.png"
+                                          alt="img-7.png"
+                                          class="product-img avatar-sm"
+                                        />
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="review-list py-2" id="review-2">
+                                <div class="border border-dashed rounded p-3">
+                                  <div class="hstack flex-wrap gap-3 mb-4">
+                                    <div
+                                      class="badge rounded-pill bg-danger-subtle text-danger mb-0"
+                                    >
+                                      <i class="mdi mdi-star"></i>
+                                      <span class="rate-num">4.0</span>
+                                    </div>
+                                    <div class="vr"></div>
+                                    <div class="flex-grow-1">
+                                      <p class="mb-0">
+                                        <a href="#!">Camilla Harber</a>
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <p class="text-muted fs-13 mb-0">
+                                        03 Mar, 2023
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <a
+                                        href="#addReview"
+                                        class="badge bg-secondary-subtle text-secondary edit-item-list"
+                                        data-bs-toggle="modal"
+                                        ><i
+                                          class="ph-pencil align-baseline me-1"
+                                        ></i>
+                                        Edit</a
+                                      >
+                                      <a
+                                        href="#removeItemModal"
+                                        class="badge bg-danger-subtle text-danger"
+                                        data-bs-toggle="modal"
+                                        ><i class="ph-trash align-baseline"></i
+                                      ></a>
+                                    </div>
+                                  </div>
+
+                                  <h6 class="review-title fs-md">
+                                    Product Quality
+                                  </h6>
+                                  <p class="review-desc mb-0">
+                                    " We have used your other templates as well
+                                    and seems it's amazing with the design and
+                                    code quality. Wish you best for the future
+                                    updates. Keep updated you will be #1 in near
+                                    future. "
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li class="review-list py-2" id="review-3">
+                                <div class="border border-dashed rounded p-3">
+                                  <div class="hstack flex-wrap gap-3 mb-4">
+                                    <div
+                                      class="badge rounded-pill bg-danger-subtle text-danger mb-0"
+                                    >
+                                      <i class="mdi mdi-star"></i>
+                                      <span class="rate-num">5.0</span>
+                                    </div>
+                                    <div class="vr"></div>
+                                    <div class="flex-grow-1">
+                                      <p class="mb-0">
+                                        <a href="#!">Kaylin Bechtelar</a>
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <p class="text-muted fs-13 mb-0">
+                                        28 Feb, 2023
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <a
+                                        href="#addReview"
+                                        class="badge bg-secondary-subtle text-secondary edit-item-list"
+                                        data-bs-toggle="modal"
+                                        ><i
+                                          class="ph-pencil align-baseline me-1"
+                                        ></i>
+                                        Edit</a
+                                      >
+                                      <a
+                                        href="#removeItemModal"
+                                        class="badge bg-danger-subtle text-danger"
+                                        data-bs-toggle="modal"
+                                        ><i class="ph-trash align-baseline"></i
+                                      ></a>
+                                    </div>
+                                  </div>
+
+                                  <h6 class="review-title fs-md">
+                                    Design Quality
+                                  </h6>
+                                  <p class="review-desc mb-0">
+                                    " This template is incredibly comprehensive
+                                    considering how new and modern it is! I
+                                    bought 8 different admin templates recently
+                                    and all of them had some good features, but
+                                    were always missing stuff that you only
+                                    realise after purchase. I've migrated my
+                                    site to this template and have yet to find
+                                    anything missing or lacking! Plus, the
+                                    online documentation is really easy to use
+                                    and access and very comprehensive! Well done
+                                    guys and thank you! "
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li class="review-list py-2" id="review-4">
+                                <div class="border border-dashed rounded p-3">
+                                  <div class="hstack flex-wrap gap-3 mb-4">
+                                    <div
+                                      class="badge rounded-pill bg-danger-subtle text-danger mb-0"
+                                    >
+                                      <i class="mdi mdi-star"></i>
+                                      <span class="rate-num">3.5</span>
+                                    </div>
+                                    <div class="vr"></div>
+                                    <div class="flex-grow-1">
+                                      <p class="mb-0">
+                                        <a href="#!">Dedrick Shields</a>
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <p class="text-muted fs-13 mb-0">
+                                        24 Feb, 2023
+                                      </p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                      <a
+                                        href="#addReview"
+                                        class="badge bg-secondary-subtle text-secondary edit-item-list"
+                                        data-bs-toggle="modal"
+                                        ><i
+                                          class="ph-pencil align-baseline me-1"
+                                        ></i>
+                                        Edit</a
+                                      >
+                                      <a
+                                        href="#removeItemModal"
+                                        class="badge bg-danger-subtle text-danger"
+                                        data-bs-toggle="modal"
+                                        ><i class="ph-trash align-baseline"></i
+                                      ></a>
+                                    </div>
+                                  </div>
+
+                                  <h6 class="review-title fs-md">
+                                    Feature Availability
+                                  </h6>
+                                  <p class="review-desc mb-0">
+                                    " Hello everyone, I would like to suggest
+                                    here two contents that you could create.
+                                    Course pages and blog pages. In them you
+                                    could insert the listing and management of
+                                    courses and listing and management of blog.
+                                    The theme is perfect, one of the best
+                                    purchases I've ever made. "
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col -->
+                    </div>
+                    <!--end row-->
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                © Anuda Mart.
+              </div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  Design & Develop by Anuda Mart
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- addReview Modal -->
+    <div
+      class="modal fade"
+      id="addReview"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="addReviewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addReviewLabel">Add Review</h1>
+            <button
+              type="button"
+              class="btn-close"
+              id="review-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="tablelist-form" novalidate autocomplete="off">
+            <div class="modal-body">
+              <div
+                id="alert-error-msg"
+                class="d-none alert alert-danger py-2"
+              ></div>
+              <input type="hidden" id="id-field" />
+              <div class="mb-3">
+                <label class="form-label d-block"
+                  >Select Review <span class="text-danger">*</span></label
+                >
+                <div id="basic-rater" class="mx-auto" dir="ltr"></div>
+              </div>
+              <div class="mb-3">
+                <label for="reviewTitle-input" class="form-label"
+                  >Review Title <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="reviewTitle-input"
+                  placeholder="Title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="reviewDesc-input" class="form-label"
+                  >Review <span class="text-danger">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="reviewDesc-input"
+                  rows="4"
+                  placeholder="Enter review"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <label class="form-label">Product Images</label>
+                <div class="dropzone my-dropzone" style="min-height: 180px">
+                  <div class="dz-message my-2">
+                    <div class="mb-3">
+                      <i
+                        class="display-4 text-muted ri-upload-cloud-2-fill"
+                      ></i>
+                    </div>
+
+                    <h5>Drop files here or click to upload.</h5>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled mb-0" id="dropzone-preview">
+                  <li class="mt-2" id="dropzone-preview-list">
+                    <!-- This is used as the file preview template -->
+                    <div class="border rounded">
+                      <div class="d-flex p-2">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar-sm bg-light rounded">
+                            <img
+                              data-dz-thumbnail
+                              class="img-fluid rounded d-block"
+                              src="assets/images/new-document.png"
+                              alt="Dropzone-Image"
+                            />
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div class="pt-1">
+                            <h5 class="fs-md mb-1" data-dz-name>&nbsp;</h5>
+                            <p class="fs-sm text-muted mb-0" data-dz-size></p>
+                            <strong
+                              class="error text-danger"
+                              data-dz-errormessage
+                            ></strong>
+                          </div>
+                        </div>
+                        <div class="flex-shrink-0 ms-3">
+                          <button data-dz-remove class="btn btn-sm btn-danger">
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- end dropzon-preview -->
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-ghost-danger"
+                data-bs-dismiss="modal"
+              >
+                <i class="ph-x align-middle me-1"></i> Close
+              </button>
+              <button type="submit" class="btn btn-primary">Add Review</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- removeItemModal -->
+    <div
+      id="removeItemModal"
+      class="modal fade zoomIn"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="close-modal-review"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <div class="text-danger">
+                <i class="bi bi-trash display-4"></i>
+              </div>
+              <div class="mt-4 fs-base">
+                <h4 class="mb-1">Are you sure ?</h4>
+                <p class="text-muted mx-4 mb-0">
+                  Are you sure you want to remove this Notification ?
+                </p>
+              </div>
+            </div>
+            <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+              <button
+                type="button"
+                class="btn w-sm btn-light"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn w-sm btn-danger"
+                id="remove-product"
+              >
+                Yes, Delete It!
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--start back-to-top-->
+    <button class="btn btn-dark btn-icon" id="back-to-top">
+      <i class="bi bi-caret-up fs-3xl"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme Settings -->
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- dropzone js -->
+    <script src="assets/libs/dropzone/dropzone-min.js"></script>
+    <!-- rater-js plugin -->
+    <script src="assets/libs/rater-js/index.js"></script>
+
+    <script src="assets/js/pages/ecommerce-product-overview.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

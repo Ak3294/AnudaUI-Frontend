@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-preloader="disable"
+  data-theme="default"
+  data-topbar="light"
+  data-bs-theme="light"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Anuda Mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <!-- Fonts css load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      id="fontsLink"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- gridjs css -->
+    <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css" />
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!--Add Bank modal -->
+    <div
+      class="modal fade"
+      id="showModalamount"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header px-4 pt-4">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Withdrawal Amount
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="close-modal"
+            ></button>
+          </div>
+
+          <form class="tablelist-form" novalidate autocomplete="off">
+            <div class="modal-body p-4">
+              <div class="mb-3">
+                <label for="bifsc" class="form-label">Enter Amount</label>
+                <input
+                  type="text"
+                  id="bifsc"
+                  class="form-control"
+                  placeholder="5000.00"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="hstack gap-2 justify-content-end">
+                <button type="submit" class="btn btn-thm" id="add-btn">
+                  Withdrawal Now
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-ghost-danger"
+                  data-bs-dismiss="modal"
+                >
+                  <i class="bi bi-x-lg align-baseline me-1"></i> Close
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+    </div>
+    <!-- Add Bank modal -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <!-- ========== App Menu ========== -->
+      <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+          <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+              <img
+                src="assets/images/white-logo.png"
+                alt="white-logo"
+                height="33"
+              />
+            </span>
+            <span class="logo-lg">
+              <img src="assets/images/logo.png" alt="logo" height="40" />
+            </span>
+          </a>
+          <button
+            type="button"
+            class="btn btn-sm p-0 fs-3xl header-item float-end btn-vertical-sm-hover"
+            id="vertical-hover"
+          >
+            <i class="ri-record-circle-line"></i>
+          </button>
+        </div>
+
+        <div id="scrollbar">
+          <div class="container-fluid">
+            <div id="two-column-menu"></div>
+            <ul class="navbar-nav" id="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  <i class="ph-gauge"></i>
+                  <span data-key="t-dashboards">Dashboards</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarEcommerce"
+                  class="nav-link menu-link collapsed"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarEcommerce"
+                >
+                  <i class="ph-storefront"></i>
+                  <span data-key="t-ecommerce">Product</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarEcommerce">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="products.html"
+                        class="nav-link"
+                        data-key="t-products"
+                        >Products</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="add-product.html"
+                        class="nav-link"
+                        data-key="t-create-product"
+                        >Add Product</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="orders.html" class="nav-link" data-key="t-orders"
+                        >Orders</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="order-overview.html"
+                        class="nav-link"
+                        data-key="t-order-overview"
+                        >Order Overview</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link menu-link">
+                  <i class="ph-user-circle"></i>
+                  <span data-key="t-calendar">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customers.html" class="nav-link menu-link"
+                  ><i class="bi bi-people"></i>
+                  <span data-key="t-calendar">Customers</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#sidebarInvoices"
+                  class="nav-link menu-link"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarInvoices"
+                >
+                  <i class="ph-file-text"></i>
+                  <span data-key="t-invoices">Invoices</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarInvoices">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a
+                        href="invoices-list.html"
+                        class="nav-link"
+                        data-key="t-list-view"
+                        >List View</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="invoices-overview.html"
+                        class="nav-link"
+                        data-key="t-overview"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="create-invoices.html"
+                        class="nav-link"
+                        data-key="t-create-invoice"
+                        >Create Invoice</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="transactions.html" class="nav-link menu-link">
+                  <i class="ph ph-credit-card"></i>
+                  <span data-key="t-calendar">Transactions</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link menu-link">
+                  <i class="ph ph-sign-out"></i>
+                  <span data-key="t-calendar">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+
+        <div class="sidebar-background"></div>
+      </div>
+      <!-- Left Sidebar End -->
+      <!-- Vertical Overlay-->
+      <div class="vertical-overlay"></div>
+      <header id="page-topbar">
+        <div class="layout-width">
+          <div class="navbar-header">
+            <div class="d-flex">
+              <!-- LOGO -->
+              <div class="navbar-brand-box horizontal-logo">
+                <a href="index.html" class="logo logo-light">
+                  <span class="logo-sm">
+                    <img
+                      src="assets/images/white-logo.png"
+                      alt=""
+                      height="30"
+                    />
+                  </span>
+                  <span class="logo-lg">
+                    <img src="assets/images/logo.png" alt="" height="30" />
+                  </span>
+                </a>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none"
+                id="topnav-hamburger-icon"
+              >
+                <span class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <img
+                  src="assets/images/favicon.png"
+                  alt="logo"
+                  height="30"
+                  style="margin-left: 20px"
+                  class="m-logo"
+                />
+              </button>
+
+              <form class="app-search d-none d-md-inline-flex">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    autocomplete="off"
+                    id="search-options"
+                    value=""
+                  />
+                  <span class="mdi mdi-magnify search-widget-icon"></span>
+                  <span
+                    class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                    id="search-close-options"
+                  ></span>
+                </div>
+                <div
+                  class="dropdown-menu dropdown-menu-lg"
+                  id="search-dropdown"
+                >
+                  <div data-simplebar style="max-height: 320px">
+                    <!-- item-->
+                    <div class="dropdown-header">
+                      <h6 class="text-overflow text-muted mb-0 text-uppercase">
+                        Recent Searches
+                      </h6>
+                    </div>
+
+                    <div class="dropdown-item bg-transparent text-wrap">
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >how to setup <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                      <a
+                        href="index.html"
+                        class="btn btn-subtle-secondary btn-sm btn-rounded"
+                        >buttons <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                    </div>
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-1 text-uppercase">
+                        Pages
+                      </h6>
+                    </div>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Analytics Dashboard</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Help Center</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-user-settings-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>My account settings</span>
+                    </a>
+
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-2 text-uppercase">
+                        Members
+                      </h6>
+                    </div>
+
+                    <div class="notification-list">
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-2.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Angela Bernier</h6>
+                            <span class="fs-11 mb-0 text-muted">Manager</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-3.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">David Grasso</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >Web Designer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/images/users/avatar-5.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-1">
+                            <h6 class="m-0">Mike Bunch</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >React Developer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="text-center pt-3 pb-1">
+                    <a href="#" class="btn btn-primary btn-sm"
+                      >View All Results <i class="ri-arrow-right-line ms-1"></i
+                    ></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div
+                class="dropdown topbar-head-dropdown ms-1 header-item"
+                id="notificationDropdown"
+              >
+                <button
+                  type="button"
+                  class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle"
+                  id="page-header-notifications-dropdown"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-bell fs-2xl"></i>
+                  <span
+                    class="position-absolute topbar-badge fs-3xs translate-middle badge rounded-pill bg-danger"
+                    ><span class="notification-badge">4</span
+                    ><span class="visually-hidden">unread messages</span></span
+                  >
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  aria-labelledby="page-header-notifications-dropdown"
+                >
+                  <div class="dropdown-head rounded-top">
+                    <div class="p-3 border-bottom border-bottom-dashed">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <h6 class="mb-0 fs-lg fw-semibold">
+                            Notifications
+                            <span
+                              class="badge bg-danger-subtle text-danger fs-sm notification-badge"
+                            >
+                              4</span
+                            >
+                          </h6>
+                          <p class="fs-md text-muted mt-1 mb-0">
+                            You have
+                            <span class="fw-semibold notification-unread"
+                              >3</span
+                            >
+                            unread messages
+                          </p>
+                        </div>
+                        <div class="col-auto dropdown">
+                          <a
+                            href="javascript:void(0);"
+                            data-bs-toggle="dropdown"
+                            class="link-secondary fs-md"
+                            ><i class="bi bi-three-dots-vertical"></i
+                          ></a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">All Clear</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Mark all as read</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Archive All</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-2 ps-2" id="notificationItemsTabContent">
+                    <div data-simplebar style="max-height: 300px" class="pe-2">
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        New
+                      </h6>
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-info-subtle text-info rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-badge-check"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 fs-md mb-2 lh-base">
+                                Your <b>Elite</b> author Graphic Optimization
+                                <span class="text-secondary">reward</span> is
+                                ready!
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> Just 30
+                                sec ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check01"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check01"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-2.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-success rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Angela Bernier
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                Answered to your comment on the cash flow
+                                forecast's graph 🔔.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 48 min
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check02"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check02"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative unread-message"
+                      >
+                        <div class="d-flex">
+                          <div class="avatar-xs me-3 flex-shrink-0">
+                            <span
+                              class="avatar-title bg-danger-subtle text-danger rounded-circle fs-lg"
+                            >
+                              <i class="bx bx-message-square-dots"></i>
+                            </span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-2 fs-md lh-base">
+                                You have received
+                                <b class="text-success">20</b> new messages in
+                                the conversation
+                              </h6>
+                            </a>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 2 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check03"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check03"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h6
+                        class="text-overflow text-muted fs-sm my-2 text-uppercase notification-title"
+                      >
+                        Read Before
+                      </h6>
+
+                      <div
+                        class="text-reset notification-item d-block dropdown-item position-relative"
+                      >
+                        <div class="d-flex">
+                          <div class="position-relative me-3 flex-shrink-0">
+                            <img
+                              src="assets/images/users/32/avatar-8.jpg"
+                              class="rounded-circle avatar-xs"
+                              alt="user-pic"
+                            />
+                            <span
+                              class="active-badge position-absolute start-100 translate-middle p-1 bg-warning rounded-circle"
+                            >
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </div>
+
+                          <div class="flex-grow-1">
+                            <a href="#!" class="stretched-link">
+                              <h6 class="mt-0 mb-1 fs-md fw-semibold">
+                                Maureen Gibson
+                              </h6>
+                            </a>
+                            <div class="fs-sm text-muted">
+                              <p class="mb-1">
+                                We talked about a project on linkedin.
+                              </p>
+                            </div>
+                            <p
+                              class="mb-0 fs-11 fw-medium text-uppercase text-muted"
+                            >
+                              <span
+                                ><i class="mdi mdi-clock-outline"></i> 4 hrs
+                                ago</span
+                              >
+                            </p>
+                          </div>
+                          <div class="px-2 fs-base">
+                            <div class="form-check notification-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="all-notification-check04"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="all-notification-check04"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="notification-actions" id="notification-actions">
+                      <div
+                        class="d-flex text-muted justify-content-center align-items-center"
+                      >
+                        Select
+                        <div
+                          id="select-content"
+                          class="text-body fw-semibold px-1"
+                        >
+                          0
+                        </div>
+                        Result
+                        <button
+                          type="button"
+                          class="btn btn-link link-danger p-0 ms-2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeNotificationModal"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown ms-sm-3 header-item topbar-user">
+                <button
+                  type="button"
+                  class="btn shadow-none"
+                  id="page-header-user-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle header-profile-user"
+                      src="assets/images/users/32/avatar-1.jpg"
+                      alt="Header Avatar"
+                    />
+                    <span class="text-start ms-xl-2">
+                      <span
+                        class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                        >Richard Marshall</span
+                      >
+                    </span>
+                  </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <!-- item-->
+                  <h6 class="dropdown-header">Welcome Richard!</h6>
+                  <a class="dropdown-item" href="profile.html"
+                    ><i
+                      class="mdi mdi-account-circle text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Profile</span></a
+                  >
+                  <a class="dropdown-item" href="change-password.html"
+                    ><i
+                      class="mdi mdi-lock-outline text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Change Password</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="auth-logout.html"
+                    ><i
+                      class="mdi mdi-logout text-muted fs-lg align-middle me-1"
+                    ></i>
+                    <span class="align-middle" data-key="t-logout"
+                      >Logout</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- removeNotificationModal -->
+      <div
+        id="removeNotificationModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="NotificationModalbtn-close"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-4"></i>
+                </div>
+                <div class="mt-4 fs-base">
+                  <h4 class="mb-1">Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this Notification ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="delete-notification"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- removeCartModal -->
+      <div
+        id="removeCartModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="close-cartmodal"
+              ></button>
+            </div>
+            <div class="modal-body p-md-5">
+              <div class="text-center">
+                <div class="text-danger">
+                  <i class="bi bi-trash display-5"></i>
+                </div>
+                <div class="mt-4">
+                  <h4>Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this product ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="remove-cartproduct"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between"
+                >
+                  <h4 class="mb-sm-0">Transactions</h4>
+
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item active">Transactions</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+              <!--end col-->
+              <div class="col-xxl-12">
+                <div class="d-flex align-items-center flex-wrap gap-2 mb-4">
+                  <ul
+                    class="nav nav-pills arrow-navtabs nav-secondary gap-2 flex-grow-1 order-2 order-lg-1"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        href="#education"
+                        role="tab"
+                        aria-selected="false"
+                        tabindex="-1"
+                      >
+                        Summery
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="education" role="tabpanel">
+                      <div class="card-body">
+                        <div class="row mb-5">
+                          <div class="col-md-6">
+                            <div class="funds-box">
+                              <div class="bx-head-rs">
+                                <h6>Available Balance</h6>
+                                <p>
+                                  <i class="fas fa-rupee-sign"></i> 10000.00
+                                </p>
+                                <small
+                                  >(Total Balance - Funds on Hold + Available
+                                  Balance)</small
+                                >
+                              </div>
+                              <div class="withdrawal-am">
+                                <a
+                                  href="javascript:void(0)"
+                                  class="btn-thm"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#showModalamount"
+                                  >Withdrawal Amount</a
+                                >
+                              </div>
+                              <div class="account-av account-none">
+                                <p>
+                                  <span>Total Balance</span>
+                                  <span
+                                    ><i class="fas fa-rupee-sign"></i>
+                                    10000.00</span
+                                  >
+                                </p>
+                                <p>
+                                  <span>Funds on Hold</span>
+                                  <span
+                                    ><i class="fas fa-rupee-sign"></i>
+                                    0.00</span
+                                  >
+                                </p>
+                                <p>
+                                  <span>Available Balance</span>
+                                  <span
+                                    ><i class="fas fa-rupee-sign"></i>
+                                    0.00</span
+                                  >
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="funds-box">
+                              <div class="bx-head-rs">
+                                <h6>Hold Balance</h6>
+                                <p><i class="fas fa-rupee-sign"></i> 0.00</p>
+                                <small>This Amount cannont be withdrawn</small>
+                              </div>
+                              <div class="account-over">
+                                <p>
+                                  To change Hold Balance contact your anuda.live
+                                  manager
+                                  <a href="accounts@anudarealty.com"
+                                    >accounts@anudarealty.com</a
+                                  >
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="funds-box">
+                              <div class="bx-head-rs">
+                                <h6>Last Deposit</h6>
+                                <p><i class="fas fa-rupee-sign"></i> 500.00</p>
+                                <a href="" class="v-all"
+                                  ><i class="ph ph-eye me-1"></i> View all</a
+                                >
+                              </div>
+                              <div class="account-over">
+                                <p>A/c - 3255060301DC</p>
+                                <small>14 Jun 2023, 11:33 AM</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="funds-box">
+                              <div class="bx-head-rs">
+                                <h6>Last withdrawal</h6>
+                                <p><i class="fas fa-rupee-sign"></i> 0.00</p>
+                                <a href="" class="v-all">View all</a>
+                              </div>
+                              <div class="account-over"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="funds-box">
+                              <div class="bx-head-rs">
+                                <h6>Last Transfer</h6>
+                                <p><i class="fas fa-rupee-sign"></i> 0.00</p>
+                                <a href="" class="v-all">View all</a>
+                              </div>
+                              <div class="account-over"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end tab-pane-->
+                    <div class="card-body">
+                      <div class="statments-rw mb-4">
+                        <h5>Statement</h5>
+                      </div>
+                      <div
+                        class="d-flex align-items-center flex-wrap gap-2 mb-4"
+                      >
+                        <ul
+                          class="nav nav-pills arrow-navtabs nav-secondary gap-2 flex-grow-1 order-2 order-lg-1"
+                          role="tablist"
+                        >
+                          <li class="nav-item" role="presentation">
+                            <a
+                              class="nav-link active"
+                              data-bs-toggle="tab"
+                              href="#transfer"
+                              role="tab"
+                              aria-selected="true"
+                            >
+                              All Transactions
+                            </a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a
+                              class="nav-link"
+                              data-bs-toggle="tab"
+                              href="#deposit"
+                              role="tab"
+                              aria-selected="false"
+                              tabindex="-1"
+                            >
+                              Deposit
+                            </a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a
+                              class="nav-link"
+                              data-bs-toggle="tab"
+                              href="#withdrawal"
+                              role="tab"
+                              aria-selected="true"
+                            >
+                              Withdrawal
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mb-4 pb-2">
+                        <div class="tab-content">
+                          <div
+                            class="tab-pane active"
+                            id="transfer"
+                            role="tabpanel"
+                          >
+                            <div id="table-transferjs"></div>
+                          </div>
+                          <div class="tab-pane" id="deposit" role="tabpanel">
+                            <div id="table-gridjs"></div>
+                          </div>
+                          <div class="tab-pane" id="withdrawal" role="tabpanel">
+                            <div id="table-withdrawaljs"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--end tab-pane-->
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                © Anuda Mart.
+              </div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  Design & Develop by Anuda Mart
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button class="btn btn-dark btn-icon" id="back-to-top">
+      <i class="bi bi-caret-up fs-3xl"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- App js -->
+
+    <script src="assets/libs/prismjs/prism.js"></script>
+
+    <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
